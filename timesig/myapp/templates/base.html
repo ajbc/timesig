@@ -13,14 +13,12 @@
         {% block sidebar %}
         <ul>
             <li><a href="/">Home</a></li>
-            <li>{% if user.is_authenticated %}
-                    <a href="/accounts/profile">{{ user.username }}</a>
-                {% else %}
-                    <a href="/accounts/login">Log in</a>
-                {% endif %}
-            </li>
             {% if user.is_authenticated %}
+                <li><a href="/docs">Docs</a></li>
+                <li><a href="/accounts/profile">{{ user.username }}</a></li>
                 <li><a href="{% url "django.contrib.auth.views.logout" %}?next=/">Log out</a></li>
+            {% else %}
+                <li><a href="/accounts/login">Log in</a></li>
             {% endif %}
 
         </ul>
