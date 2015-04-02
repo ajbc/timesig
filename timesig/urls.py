@@ -18,4 +18,5 @@ urlpatterns = patterns('',
     url(r'^accounts/register/$', 'timesig.myapp.views.register', name='register'),
     url(r'^docs/$', 'timesig.myapp.views.docs'),
     (r'^doc/(?P<doc_id>\d+)/$', 'timesig.myapp.views.doc'),
+    (r'^doc/(?P<doc_id>\d+)/(?P<loc>\d+)$', 'timesig.myapp.views.doc_loc'),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
