@@ -1,15 +1,19 @@
 <html>
 <head>
-    <title>My Python Anywhere hosted Django app</title>
+    <title>The Shape of Time: Analysing Time Signatures in Narrative Form</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="/static/styling.css">
 </head>
 <body>
-    <h1>My Python Anywhere hosted Django app</h1>
-    <p>Well, since it's already {{ right_now.minute }} past {{ right_now.hour }} UTC,
-    that is as far as we are going to take you in this tutorial.</p>
-    <p>What you do next is up to you...</p>
+    <h1>The Shape of Time: Identifying Time Signatures in Narrative Form</h1>
+    <h2>An Overview of "Time Signatures"</h2>
+    <p>In a novel, time does not often move evenly or linearly–––a single paragraph in García Márquez's <em>One Hundred Years of Solitude</em> jumps several decades while in Proust's <em>In Search of Lost Time</em>, 15 pages are devoted to a single moment of eating a madeleine. In this project, we are interested the kind of language is used to talk about time and what is the shape/speed/pace of this language in a given text. Tracking what we call the "time signature" of a text, we use explicit references to time passing in order to divide up a text, and then use probabilistic methods to analyze the relationships to the kinds of words that cluster around changes in novel time and how these temporal patterns are distributed in a text. We hope to explore how "time signature" offers one lens into the shape of time in a novel and how such "time signatures" might be used to predict other aspects of a text such as author, genre, format, and place of publication. </p>
+    <h2>How You Can Participate</h2>
+    <p>Right now we have identified possible time anchors, but we need your help to identify the difference in time between anchors––for example, tagging a reference to "two-o'clock" as two hours ahead in time from a previous reference. To help contribute to the project, please register as a user, and then follow instructions listed on the project details page. Contributors to the project will be credited for their participation.</p>
 
     {% if user.is_authenticated %}
-        <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+        <p>Welcome, {{ user.username }}. Thanks for logging in. Click <a href="/accounts/profile">here</a> return to your profile page.</p>
     {% else %}
         <p>Please <a href="/accounts/login">log in</a> or <a href="/accounts/register">register</a>.</p>
     {% endif %}

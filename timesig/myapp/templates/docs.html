@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>My docs</h2>
+    {% for doc in userDocs %}
+		<p><a href="/doc/{{ doc.id }}'">{{ doc.title }}</a></p>
+	{% endfor %}
+
+	<hr />
+	<h2>Other docs</h2>
+	{% for doc in candidateDocs %}
+    	<p><a href="/doc/{{ doc.id }}">{{ doc.title }}</a></p>
+	{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>{{ doc.title }}</h2>
+    <div class="words">
+        {{ words|safe }}
+    </div>
+    <p>
+        <a href="/doc/{{ doc.pk }}/{{ nav.0 }}">prev my anchor</a>
+        <a href="/doc/{{ doc.pk }}/{{ nav.1 }}">prev anchor</a>
+        <a href="/doc/{{ doc.pk }}/{{ nav.2 }}">prev</a>
+        <a href="/doc/{{ doc.pk }}/{{ nav.3 }}">next</a>
+        <a href="/doc/{{ doc.pk }}/{{ nav.4 }}">next anchor</a>
+        <a href="/doc/{{ doc.pk }}/{{ nav.5 }}">next my anchor</a>
+    </p>
+
+{% endblock %}
